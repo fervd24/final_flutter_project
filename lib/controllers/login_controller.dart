@@ -13,18 +13,13 @@ class LoginController extends ChangeNotifier {
   String? _errorPasswordMessage;
   bool _isLoading = false;
   
-
-  
   UserModel? get loggedInUser => _loggedInUser;
   String? get errorEmailMessage => _errorEmailMessage;
   String? get errorPasswordMessage => _errorPasswordMessage;
   bool get isEmailValid => LoginValidator.isEmailValid(_email);
   bool get isPasswordValid => LoginValidator.isPasswordValid(_password);
   bool get isLoading => _isLoading;
-
- //TODO:create service en model
   
-
   void updateEmail(String email) {
     if (LoginValidator.isEmailValid(email)) {
       _email = email;
@@ -68,8 +63,8 @@ class LoginController extends ChangeNotifier {
       Navigator.of(context).pushReplacementNamed('/menu');
       
     } else {
-      print('Invalid User');
       _loggedInUser = null;
+      notifyListeners();
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Invalid user!')),
       );
@@ -89,6 +84,5 @@ class LoginController extends ChangeNotifier {
 
     _loggedInUser = null;
     notifyListeners();
-    print(_loggedInUser);
   }
 }

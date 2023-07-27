@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_final_project/controllers/info_controller.dart';
 import 'package:flutter_final_project/controllers/login_controller.dart';
 import 'package:flutter_final_project/controllers/qr_scanner_controller.dart';
+import 'package:flutter_final_project/controllers/serial_number_controller.dart';
 import 'package:flutter_final_project/routes/route_generator.dart';
 import 'package:provider/provider.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<LoginController>(create: (_) => LoginController()),
         ChangeNotifierProvider<InfoController>(create: (_) => InfoController()),
         ChangeNotifierProvider<QRScannerController>(create: (_) => QRScannerController()),
+        ChangeNotifierProvider<SerialNumberController>(create: (_) => SerialNumberController()),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,

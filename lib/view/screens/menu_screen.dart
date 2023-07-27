@@ -43,7 +43,7 @@ class MenuScreen extends StatelessWidget {
                     arguments: info
                   );
                 }, 
-                child: const Text('Information')
+                child: const Text('Informacion')
                 ),
             ),
             const MenuButtonWidget(

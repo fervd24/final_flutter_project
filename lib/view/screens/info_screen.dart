@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_final_project/models/information/info_model.dart';
 
-//TODO: BOTON DE REGRESAR
 class InfoScreen extends StatelessWidget {
   final InfoModel info;
 

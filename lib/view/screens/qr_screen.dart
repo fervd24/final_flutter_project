@@ -114,7 +114,7 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
     
     controller.scannedDataStream.listen((scanData) {
       final qrScanResult = scanData.code;
-      Provider.of<QRScannerController>(context, listen: false).setScanResult(qrScanResult as QrCodeResult);
+      Provider.of<QRScannerController>(context, listen: false).setScanResult(qrScanResult);
       
     });
   }

@@ -26,16 +26,12 @@ class QRScannerController extends ChangeNotifier {
     });
   }
 
-  void setScanResult(QrCodeResult result) async {
-    _scanResult = QrCodeResult(
-      username: 'user1', 
-      password: '12345'
-      );
+  void setScanResult(result) async {
 
     //Simulating api call
     await Future.delayed(const Duration(seconds: 2));
 
-    print(_scanResult);
+    print('Username: $result');
     notifyListeners();
   }
 

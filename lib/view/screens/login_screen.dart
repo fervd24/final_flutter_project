@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  //TODO: move isButtonEnabled to controller
+  
   
   @override
   Widget build(BuildContext context) {
